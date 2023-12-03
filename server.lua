@@ -60,7 +60,7 @@ if Config.logs.playerConnecting then
         end
         sendWebhook({
             ["title"] = "Player Connecting",
-            ["description"] = "Player [".. name .."](https://steamcommunity.com/profiles/".. hexToDecimal(steam) ..") is connecting to the server." ..  discordString .. "\n\nIP: ||`"..ip.."`||",
+            ["description"] = "Player [".. name .."](https://steamcommunity.com/profiles/".. hexToDecimal(steam) ..") is connecting to the server." ..  discordString .. "\n- IP: ||`"..ip.."`||",
         })
     end)
 end
@@ -76,7 +76,7 @@ if Config.logs.playerDropped then
         end
         sendWebhook({
             ["title"] = "Player Disconnected",
-            ["description"] = "Player [".. name .."](https://steamcommunity.com/profiles/".. hexToDecimal(steam) ..") has disconnected from the server." .. discordString .. "\n\n- IP: ||`"..ip.."`||",
+            ["description"] = "Player [".. name .."](https://steamcommunity.com/profiles/".. hexToDecimal(steam) ..") has disconnected from the server." .. discordString .. "\n- IP: ||`"..ip.."`||",
         })
     end)
 end

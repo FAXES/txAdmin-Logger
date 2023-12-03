@@ -46,7 +46,7 @@ local function hexToDecimal(hexValue)
     return decimalValue
 end
 -- The below function is from txAdmin
-local function getLogPlayerName(src) if type(src) == 'number' then local name = sub(GetPlayerName(src) or "unknown", 1, 75) return '[#'..src..'] '..name else return '[??] '.. (src or "unknown") end end
+local function getLogPlayerName(src) if type(src) == 'number' then local name = string.sub(GetPlayerName(src) or "unknown", 1, 75) return '[#'..src..'] '..name else return '[??] '.. (src or "unknown") end end
 
 if Config.logs.playerConnecting then
     AddEventHandler('playerConnecting', function()

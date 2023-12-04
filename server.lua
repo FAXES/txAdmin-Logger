@@ -56,7 +56,7 @@ if Config.logs.playerConnecting then
         local ip = GetPlayerEndpoint(source);
         local discordString = ''
         if discord then
-            discordString = "\n\n- Discord ID: ["..discord.."](https://discordlookup.com/user/"..discord..")"
+            discordString = "\n\n- Discord ID: <@".. discord .."> (["..discord.."](https://discordlookup.com/user/"..discord.."))"
         end
         sendWebhook({
             ["title"] = "Player Connecting",
@@ -72,7 +72,7 @@ if Config.logs.playerDropped then
         local ip = GetPlayerEndpoint(source);
         local discordString = ''
         if discord then
-            discordString = "\n\n- Discord ID: ["..discord.."](https://discordlookup.com/user/"..discord..")"
+            discordString = "\n\n- Discord ID: <@".. discord .."> (["..discord.."](https://discordlookup.com/user/"..discord.."))"
         end
         sendWebhook({
             ["title"] = "Player Disconnected",
@@ -109,7 +109,7 @@ if Config.logs.menuEvent then
         local steam,discord = getUserDetails(source);
         local discordString = ''
         if discord then
-            discordString = "\n\n- Discord ID: ["..discord.."](https://discordlookup.com/user/"..discord..")"
+            discordString = "\n\n- Discord ID: <@".. discord .."> (["..discord.."](https://discordlookup.com/user/"..discord.."))"
         end
         if action == 'playerModeChanged' then
             if data == 'godmode' then
@@ -198,7 +198,7 @@ if Config.logs.CommandExecuted then
         local steam,discord = getUserDetails(source);
         local discordString = ''
         if discord then
-            discordString = "\n\n- Discord ID: ["..discord.."](https://discordlookup.com/user/"..discord..")"
+            discordString = "\n\n- Discord ID: <@".. discord .."> (["..discord.."](https://discordlookup.com/user/"..discord.."))"
         end
         sendWebhook({
             ["title"] = "Command Executed",
